@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Flask Route Options</h1>
+<head>
+    <title>Home</title>
+    <form>
+    <label for="route-selector">What do you want to do?</label> <br><br>
+    <input type="submit" formaction="{{ url_for('read_file_to_html') }}" value="Reads file (.csv) in (.html) format"> <br><br>
+    <input type="submit" formaction="{{ url_for('upload_file') }}" value="Reads file (.csv), then clean it, and view file cleansing result in (.html) format"> <br><br>
+    <input type="submit" formaction="{{ url_for('upload_download_file') }}" value="Submit your file (.csv), clean it automatically, and download the clean file as .csv file"> <br><br>
+    <input type="submit" formaction="{{ url_for('index') }}" value="Cleansing tweet by choosing index from column 'Tweet'"> <br><br>
+    <input type="submit" formaction="{{ url_for('clean') }}" value="Input text to clean it">
+  </form>
+</body>
+</html>

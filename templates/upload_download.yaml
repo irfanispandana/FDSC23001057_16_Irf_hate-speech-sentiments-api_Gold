@@ -1,0 +1,22 @@
+tags:
+  - name: UPLOAD FILE (.csv) TO CLEAN THE DATA AND DOWNLOAD IT
+get:
+  description: File want to clean
+parameters:
+  - in: formData
+    name: file
+    type: file
+    required: True
+    description: The file to upload.
+  - in: formData
+    name: note
+    type: string
+    required: False
+    description: Description of file contents.
+responses:
+    '200':
+      description: Succesful response
+    '400':
+      description: Bad request
+    '500':
+      description: Internal Server Error

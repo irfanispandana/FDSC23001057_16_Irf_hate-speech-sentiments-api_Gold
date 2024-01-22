@@ -1,0 +1,22 @@
+tags:
+  - name: UPLOAD FILE (.csv), THEN CHOOSE WHAT YOU WANT TO DO
+post:
+  description: File want to clean
+parameters:
+  - in: formData
+    name: file
+    type: file
+    required: True
+    description: The file to upload.
+  - in: formData
+    name: directory_path
+    type: string
+    required: False
+    description: Input the directory without (" ") to save downloaded file
+responses:
+    '200':
+      description: Succesful response
+    '400':
+      description: Bad request
+    '500':
+      description: Internal Server Error

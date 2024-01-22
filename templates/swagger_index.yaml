@@ -1,0 +1,22 @@
+tags:
+  - name: INPUT THE INDEX YOU WANT TO CLEANSING AUTOMATICALLY
+get:
+  description: File want to clean
+parameters:
+  - in: formData
+    name: index
+    type: integer
+    required: True
+    description: Input the index from tweet column you want to clean
+  - in: formData
+    name: note
+    type: string
+    required: False
+    description: Description of text contents.
+responses:
+    '200':
+      description: Succesful response
+    '400':
+      description: Bad request
+    '500':
+      description: Internal Server Error
